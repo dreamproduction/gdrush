@@ -9,6 +9,5 @@
         }
     ],
     "bin": ["bin/gdrush"],
-    "require": {},
-    "version": "0.1.4"
+    "require": {}
 }
