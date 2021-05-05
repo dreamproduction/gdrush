@@ -1,0 +1,12 @@
+{
+    "name": "dreamproduction/gdrush",
+    "description": "Run drush command over all defined aliases, with posibility to filter them using grep.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Calin Marian",
+            "email": "calin@dreamproduction.com"
+        }
+    ],
+    "require": {}
+}
