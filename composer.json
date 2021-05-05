@@ -8,5 +8,6 @@
             "email": "calin@dreamproduction.com"
         }
     ],
+    "bin": ["bin/gdrush"],
     "require": {}
 }
