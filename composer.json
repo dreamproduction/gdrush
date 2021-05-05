@@ -2,12 +2,12 @@
     "name": "dreamproduction/gdrush",
     "description": "Run drush command over all defined aliases, with posibility to filter them using grep.",
     "type": "library",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Calin Marian",
             "email": "calin@dreamproduction.com"
         }
     ],
-    "bin": ["bin/gdrush"],
-    "require": {}
+    "bin": ["bin/gdrush"]
 }
