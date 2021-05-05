@@ -1,0 +1,21 @@
+#!/bin/bash
+
+directory="$PWD"
+grep_pattern=$1
+shift
+
+function upsearch () {
+    test / == "$PWD" && return || \
+    test -e "$1" && return || \
+    cd .. && upsearch "$1"
+}
+
+upsearch composer.lock
+test -e composer.lock || exit 1
+test -e vendor/bin/drush || exit 1
+
+drush='vendor/bin/drush'
+
+$drush sa --format=list | grep $grep_pattern | xargs -I % $drush % "$@"
+
+cd $directory
