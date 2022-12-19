@@ -17,5 +17,7 @@ test -e vendor/bin/drush || exit 1
 drush='vendor/bin/drush'
 
 $drush sa --format=list | grep $grep_pattern | xargs -I % $drush % "$@"
+exit_code=$?
 
 cd $directory
+exit $exit_code
