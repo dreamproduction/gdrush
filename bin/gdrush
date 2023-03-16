@@ -20,7 +20,7 @@ exit_code=0
 $drush sa --format=list | grep $grep_pattern | while read -r alias; do
     echo "Running: \"drush $alias $@\""
     $drush $alias "$@"
-    temp_exit_code = $?
+    temp_exit_code=$?
     if [ $temp_exit_code -ne 0 ]; then
         echo "ERROR: Command \"drush $alias $@\" failed"
         exit_code=$temp_exit_code
